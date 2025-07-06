@@ -38,7 +38,9 @@ task-manager/
 ├── .env             # Environment variables (not included in repo)
 
 ├── .github/
+
 │   └── workflows/
+
 │       └── ci.yml   # GitHub Actions CI pipeline
 
 └── README.md        # This file
@@ -118,7 +120,7 @@ This project uses GitHub Actions for automated testing. The CI pipeline:
 
 - **Triggers**: Runs on pushes to main branch and all pull requests
 - **Environment**: Ubuntu latest with Python 3.11
-- **Database**: PostgreSQL 13 service container for testing
+- **Database**: PostgreSQL 16 service container for testing
 - **Tests**: Automatically runs the full pytest suite
 
 #### CI Pipeline Features
