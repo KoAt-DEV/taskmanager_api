@@ -28,20 +28,26 @@ A secure REST API for task management built with FastAPI, featuring JWT authenti
 ## Project Structure
 
 task-manager/
+
 ├── main.py          # Main application file with API endpoints
+
 ├── test.py          # Comprehensive test suite
+
 ├── requirements.txt # Python dependencies
+
 ├── .env             # Environment variables (not included in repo)
+
 ├── .github/
 │   └── workflows/
 │       └── ci.yml   # GitHub Actions CI pipeline
+
 └── README.md        # This file
 
 ## Installation
 
 1. **Clone the repository**
    ```bash
-   git clone <https://github.com/KoAt-DEV/task_manager_api>
+   git clone <https://github.com/KoAt-DEV/taskmanager_api>
    cd task-manager
    ```
 
@@ -206,4 +212,3 @@ This project is open source and available under the [MIT License](LICENSE).
 Make sure your `.env` file is properly configured and not committed to version control. Add `.env` to your `.gitignore` file.
 
 For CI/CD, ensure all required secrets are added to your GitHub repository settings.
-## Future Enhancements
