@@ -161,6 +161,14 @@ async def log_errors_to_file(request: Request, call_next_function):
 
     return response
 
+@app.get("/")
+def root(request: Request):
+    docs_url = str(request.base_url) + "docs"
+    return {
+        "message": "Welcome to the Task Manager API!",
+        "docs_url": docs_url
+    }
+
 #User registration
 
 @app.post('/register')
