@@ -1,23 +1,12 @@
 import pytest
 from fastapi.testclient import TestClient
 from main import Base, get_db, app
-from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 import os
 
 
-load_dotenv()
-
-DB_USERNAME = os.getenv("DB_USERNAME")
-DB_PASSWORD = os.getenv("DB_PASSWORD")
-DB_NAME = os.getenv("DB_NAME")
-TEST_DB_NAME = os.getenv("TEST_DB_NAME")
-DB_HOST = os.getenv("DB_HOST")
-DB_PORT = os.getenv("DB_PORT")
-
-
-TEST_DB_URL = f"postgresql+psycopg://{DB_USERNAME}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{TEST_DB_NAME}"
+TEST_DB_URL = os.getenv("NEON_TEST_URL")
 
 # Test DB connection
 test_engine = create_engine(TEST_DB_URL)
